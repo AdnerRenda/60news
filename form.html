@@ -1,0 +1,122 @@
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="css/bootstrap-select.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+
+<div class="col-md-1"> 
+</div>
+<div class="conteiner col-md-8 ">
+<div class="row">
+<table id="set_table" class="table" style="width:80%;">
+  <thead>
+    <tr>
+      <th>№ п/п</th>
+      <th></th>
+      <th></th>
+      <th>Источник</th>
+      <th>Колонка</th>
+      <th>Обновление</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr id='tr0'>
+      <td>0</td>
+      <td>
+      <button href="#" class="btn" onclick="uptr();"><i class="glyphicon glyphicon-chevron-up"> </i></button>
+      </td>
+      <td>
+      <button href="#" class="btn" onclick="downtr();"><i class="glyphicon glyphicon-chevron-down"> </i></button>
+      </td>
+    
+      <td>
+      <select >
+        <option>Unian</option>
+        <option>Forbs</option>
+        <option>Censor</option>
+      </select>
+      </td>
+      <td><input type="text" placeholder="300px" class="input-small"></td>
+      <td><input type="text" placeholder="60c" class="input-small"></td>
+      <td><button href="#" class="btn" onclick="deltr();"><i class="glyphicon glyphicon glyphicon-remove"></i></button></td>
+      </tr>
+    
+  </tbody>
+</table>
+
+<button href="#" class="btn" onclick="addtr();"><i class="glyphicon glyphicon-plus"> </i> Add </button>
+<button href="#" class="btn" onclick="refresh_table();"><i class="glyphicon glyphicon-plus"> </i>Refresh </button>
+</div>
+</div>
+       
+<script>
+ function refresh_table()
+ {
+var $rows=$('#set_table tbody tr');    
+var rows_count = $rows.length;
+
+$rows.each(function(indx, element)
+  { 
+// hide/show button delete 
+if (rows_count==1) {$rows.eq(0).children('td').eq(6).children('button').hide();} 
+              else {$rows.eq(0).children('td').eq(6).children('button').show();}
+    
+// hide/show button up/down
+  if (indx==0)            {$(element).children('td').eq(1).children('button').hide();} 
+                     else {$(element).children('td').eq(1).children('button').show();}
+  if (indx==rows_count-1) {$(element).children('td').eq(2).children('button').hide();} 
+                     else {$(element).children('td').eq(2).children('button').show();}
+ 
+  $(element).attr('id','tr'+indx); 
+  $(element).children('td').eq(0).html(indx);
+});
+
+ }
+
+ function addtr()
+{   
+   var $clone = $("#tr0").clone(true);
+   var rows = $('#set_table tbody tr').length;
+
+   $clone.attr('id','tr'+rows);
+   $clone.children('td').eq(0).html(rows);
+   $clone.children('td').eq(1).children('button').attr('onclick','uptr($(this).parents("tr").attr("id").substring(2));');
+   $clone.children('td').eq(2).children('button').attr('onclick','downtr($(this).parents("tr").attr("id").substring(2));');
+   $clone.children('td').eq(6).children('button').attr('onclick','remtr($(this).parents("tr").attr("id").substring(2));');
+
+   $clone.appendTo("#set_table"); 
+   refresh_table();
+
+ }
+
+
+ function remtr(ntr)
+{
+  $('#set_table #tr'+ntr).remove();
+  
+}
+
+</script>       
+
+
+<!-- javascript -->
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-select.min.js"></script>
+
+  <script>
+        $('.selectpicker').selectpicker();
+        $('.selectpicker').selectpicker({style: 'btn-info', size: 4 });
+</script>
+</body>
+</body>
+
+
+
+
