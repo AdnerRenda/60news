@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
 <?php
 
 //ini_set('error_reporting', E_ALL);

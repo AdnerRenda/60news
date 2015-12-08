@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @font-face {
     font-family: "OpenSans";
     font-style: normal;
@@ -39,11 +40,18 @@
     background-attachment: scroll;
     background-clip: border-box;
     background-color: #F8F8FF;
+=======
+header {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #ffffff;
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
     background-image: none;
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat;
     background-size: auto auto;
+<<<<<<< HEAD
     color: #ffffff;
     padding-bottom: 0px;
     padding-left: 23px;
@@ -196,11 +204,20 @@ padding-top: 5px;
     background-attachment: scroll;
     background-clip: border-box;
     background-color: rgb(237, 195, 79);
+=======
+}
+
+.navbar-header {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: #21c2f8;
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
     background-image: none;
     background-origin: padding-box;
     background-position: 0 0;
     background-repeat: repeat;
     background-size: auto auto;
+<<<<<<< HEAD
     font-size: 10px;
     padding-bottom: 0;
     padding-left: 2px;
@@ -464,5 +481,32 @@ padding-top: 5px;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
+=======
+    color: #ffffff;
+    padding-bottom: 19px;
+    padding-left: 23px;
+    padding-right: 23px;
+    padding-top: 41px;
+    position: relative;
+}
+
+.navbar-brand {
+    float: left;
+
+
+h1, .h1 {
+    color: #ffffff;
+    font-size: 54px;
+    line-height: 1.01852;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Raleway",sans-serif;
+    font-weight: 900;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    text-transform: uppercase;
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
 }
 

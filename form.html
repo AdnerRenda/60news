@@ -1,17 +1,25 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<<<<<<< HEAD
 <script>
 var NTable = new Array;
 
 
 </script>
+=======
+
+
+
+
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
 </head>
 <body>
 
 <div class="conteiner col-md-8 ">
 <a href="#myModal"  class="btn" data-toggle="modal">Открыть модальное окно</a>
 
+<<<<<<< HEAD
 
 <div id='divnew0' style="margin-left: 5%; float:left ; width:35%; display:none;" >
 <div> 
@@ -30,11 +38,22 @@ var NTable = new Array;
   <div class="modal-header">
     <button class="close" data-dismiss="modal">×</button>
     Настройки
+=======
+<!-- modal -->
+<div id="myModal" class="modal" >
+  <div class="modal-header">
+    <button class="close" data-dismiss="modal">×</button>
+    <h3>Заголовок</h3>
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
   </div>
   <div class="modal-body">
 
 
+<<<<<<< HEAD
 <table id="set_table" class="table" >
+=======
+<table id="set_table" class="table" style="width:80%;">
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
   <thead>
     <tr>
       <th>№ п/п</th>
@@ -63,9 +82,15 @@ var NTable = new Array;
         <option>Censor</option>
       </select>
       </td>
+<<<<<<< HEAD
       <td><input type="text" size="4" placeholder="300px" class="input-small" value="300"></td>
       <td><input type="text" size="4" placeholder="1 м" class="input-small" value="1"></td>
       <td><button href="#" class="btn" onclick="deltr();"><i class="glyphicon glyphicon-remove"> </i></button></td>
+=======
+      <td><input type="text" placeholder="300px" class="input-small"></td>
+      <td><input type="text" placeholder="60c" class="input-small"></td>
+      <td><button href="#" class="btn" onclick="deltr();"><i class="glyphicon glyphicon glyphicon-remove"></i></button></td>
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
       </tr>
     
   </tbody>
@@ -73,6 +98,7 @@ var NTable = new Array;
 </div>
 <div class="modal-footer">
 <button href="#" class="btn" onclick="addtr();"><i class="glyphicon glyphicon-plus"> </i> Add </button>
+<<<<<<< HEAD
 <button href="#" class="btn" onclick="save_table(NTable);"><i class="glyphicon glyphicon-plus"> </i> Save </button>
 <button href="#" class="btn" onclick="load_table(NTable);"><i class="glyphicon glyphicon-plus"> </i> Load </button>
 <button href="#" class="btn" onclick="load_table_serv(NTable);"><i class="glyphicon glyphicon-plus"> </i> Load Server</button>
@@ -188,6 +214,38 @@ function clear_table()
 
 }
 
+=======
+</div>
+</div>
+<!-- end modal -->
+</div>
+
+
+      <!-- HTML код кнопки (для отображения модального окна) -->
+    <a href="#myModal" data-target="#myModal" class="btn btn-lg btn-primary" data-toggle="modal">Открыть модальное окно</a>
+        
+    <!-- HTML код диалогового окна-->
+    <div id="myModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h4 class="modal-title">Подтверждение</h4>
+          </div>
+          <div class="modal-body">
+            <p>Вы хотите сохранить изменения, сделанные в документе перед закрытием?</p>
+            <p class="text-warning"><small>Если Вы не сохраните, изменения будут потеряны.</small></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary">Сохранить изменения</button>
+          </div>
+        </div>
+      </div>
+    </div>
+       
+<script>
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
  function refresh_table()
  {
 var $rows=$('#set_table tbody tr');    
@@ -228,7 +286,11 @@ $eltd=$el.children('td');
    $clone.appendTo("#set_table"); 
    refresh_table();
    $clone.show();
+<<<<<<< HEAD
    return $clone; 
+=======
+
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
  }
 function downtr(ntr)
 {
@@ -257,8 +319,15 @@ function uptr(ntr)
 <!-- javascript -->
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+<<<<<<< HEAD
 
   
+=======
+ <script src="js/bootstrap-modal.js"></script>
+      
+  
+
+>>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
 </body>
 
 
