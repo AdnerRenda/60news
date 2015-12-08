@@ -1,3 +1,34 @@
+@font-face {
+    font-family: "OpenSans";
+    font-style: normal;
+    font-weight: normal;
+    src: url("/fonts/opensans-regular.svg") format("svg"),
+    url("/fonts/opensans-regular.eot") format("embedded-opentype"),
+    url("/fonts/opensans-regular.ttf") format("truetype"),
+    url("/fonts/opensans-regular.woff") format("woff");
+    
+}
+
+@font-face {
+    font-family: "OpenSansCondBold";
+    font-style: normal;
+    font-weight: normal;
+    src: url("www.unian.ua/css/fonts/opensans-condbold.eot?#iefix") format("embedded-opentype"), 
+    url("www.unian.ua/css/fonts/opensans-condbold.ttf") format("truetype"), 
+    url("www.unian.ua/css/fonts/opensans-condbold.woff") format("woff"), 
+    url("www.unian.ua/css/fonts/opensans-condbold.svg#opensans-condbold") format("svg");
+}
+
+.news_header div {
+   display:inline-block;
+}
+
+.news
+{
+    margin-left: 5%; 
+    display:inline-block;
+    vertical-align: top;    
+}
 
 .navbar {
   min-height:25px !important;
@@ -39,6 +70,399 @@
     vertical-align:center;
  }
 
+.news_body div.article {
+padding-top: 5px;
+}
 
 
+
+.unian a {
+    color: #2a3643;
+}
+
+.unian a, a:hover {
+    text-decoration-color: -moz-use-text-color !important;
+    text-decoration-line: none !important;
+    text-decoration-style: solid !important;
+}
+.unian a {
+    outline-color: -moz-use-text-color;
+    outline-style: none;
+    outline-width: medium;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+
+.unian .article {
+    -x-system-font: none;
+    font-family: "OpenSans";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    line-height: 18px;
+}
+
+.unian .bold {
+    font-weight: bold !important;
+}
+
+.unian .red {
+    color: #b03d40 !important;
+    font-weight: bold !important;
+}
+
+.unian .date {
+    -x-system-font: none;
+    font-family: "OpenSansCondBold";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 14px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    line-height: 18px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 4px;
+    padding-top: 0;
+}
+
+.unian .updated {
+    -x-system-font: none;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("http://images.unian.net/img/icon-sprite.png");
+    background-origin: padding-box;
+    background-position: -27px -74px;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    bottom: 1px;
+    color: #edc34f;
+    display: inline-block;
+    font-family: "OpenSans";
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 12px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    height: 12px;
+    line-height: 12px;
+    margin-bottom: 0;
+    margin-left: 1px;
+    margin-right: 4px;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 16px;
+    padding-right: 0;
+    padding-top: 0;
+    position: relative;
+}
+
+.unian .interview {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgb(237, 195, 79);
+    background-image: none;
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    font-size: 10px;
+    padding-bottom: 0;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0;
+    text-transform: uppercase;
+}
+
+.unian .video {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("http://images.unian.net/img/icon-sprite.png");
+    background-origin: padding-box;
+    background-position: -15px -74px;
+    background-repeat: repeat;
+    background-size: auto auto;
+    bottom: -1px;
+    display: inline-block;
+    height: 12px;
+    margin-bottom: 0;
+    margin-left: 3px;
+    margin-right: 4px;
+    margin-top: 0;
+    position: relative;
+    width: 12px;
+}
+
+
+.censor {
+    -x-system-font: none;
+    clear: both;
+    font-family: Arial,Helvetica,sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 12px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: normal;
+    line-height: 18px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-top: 0;
+
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-bottom-color: -moz-use-text-color;
+    border-bottom-style: none;
+    border-bottom-width: 0;
+    border-image-outset: 0 0 0 0;
+    border-image-repeat: stretch stretch;
+    border-image-slice: 100% 100% 100% 100%;
+    border-image-source: none;
+    border-image-width: 1 1 1 1;
+    border-left-color: -moz-use-text-color;
+    border-left-style: none;
+    border-left-width: 0;
+    border-right-color: -moz-use-text-color;
+    border-right-style: none;
+    border-right-width: 0;
+    border-top-color: -moz-use-text-color;
+    border-top-style: none;
+    border-top-width: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+}
+
+
+.censor .bold {
+    -x-system-font: none;
+    font-family: Arial,Helvetica,sans-serif;
+    font-feature-settings: normal;
+    font-kerning: auto;
+    font-language-override: normal;
+    font-size: 15px;
+    font-size-adjust: none;
+    font-stretch: normal;
+    font-style: normal;
+    font-synthesis: weight style;
+    font-variant-alternates: normal;
+    font-variant-caps: normal;
+    font-variant-east-asian: normal;
+    font-variant-ligatures: normal;
+    font-variant-numeric: normal;
+    font-variant-position: normal;
+    font-weight: bold;
+    line-height: 18px;
+}
+
+.censor a {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    transition-delay: 0s;
+    transition-duration: 300ms;
+    transition-property: color;
+    transition-timing-function: ease;
+    }
+
+.censor .time {
+    color: #000000;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 16px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 4px;
+    padding-top: 0;
+    display:inline;
+}
+
+.censor .hits_info span,
+.censor .questions_info span,
+.censor .comments_info span {
+    color: #f45619 ;
+}
+
+.censor .hits_info span.ico {
+    background-position: 0 -49px;
+}
+.censor .hits_info span.ico,
+.censor .questions_info span.ico,
+.censor .comments_info span.ico {
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("http://censor.net.ua/images/sprite_39.gif");
+    background-origin: padding-box;
+    background-position: 0 0;
+    background-repeat: repeat;
+    background-size: auto auto;
+    margin-right: 2px;
+    padding-left: 9px;
+    white-space: nowrap;
+}
+
+.censor .comments_info span.ico {
+    background-position: -20px -48px;
+    margin-left: 2px;
+    padding-left: 10px;
+}
+
+.censor .hits_info span.ico {
+    background-position: 0 -49px;
+}
+
+.censor .is_censor_news {
+    display: block;
+    float: left;
+    height: 14px;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 4px;
+    margin-top: 2px;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    width: 20px;
+}
+.censor span.is_censor_news {
+    -x-system-font: none ;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url("http://censor.net.ua/images/sprite_39.gif");
+    background-origin: padding-box;
+    background-position: -92px 0;
+    background-repeat: no-repeat;
+    background-size: auto auto;
+    font-family: Arial,Helvetica,sans-serif ;
+    font-feature-settings: normal ;
+    font-kerning: auto ;
+    font-language-override: normal ;
+    font-size: 12px ;
+    font-size-adjust: none ;
+    font-stretch: normal ;
+    font-style: normal ;
+    font-synthesis: weight style ;
+    font-variant-alternates: normal ;
+    font-variant-caps: normal ;
+    font-variant-east-asian: normal ;
+    font-variant-ligatures: normal ;
+    font-variant-numeric: normal ;
+    font-variant-position: normal ;
+    font-weight: normal ;
+    line-height: 16px ;    
+}
+
+
+.forbs {
+    color: #222;
+    font-family: "pt_serifregular",Georgia,Times New Roman,Times,serif;
+}
+
+.forbs .newsitem1 {
+    border-bottom-color: #d4d4d4;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    display: block;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 16px;
+    text-decoration-color: -moz-use-text-color;
+    text-decoration-line: none;
+    text-decoration-style: solid;
+}
+
+.forbs .time1 {
+    color: #666;
+    float: left;
+    font-family: Arial,Helvetica,sans-serif;
+    font-size: 11px;
+    margin-bottom: 0;
+    margin-left: 3px;
+    margin-right: 0;
+    margin-top: 1px;
+    width: 37px;
+    
+}
+
+.forbs .newsitem1 h2, .forbs .newsitem1 .article__title {
+    font-size: 20px;
+}
+.forbs .newsitem1 h2, .forbs .newsitem1 .article__title {
+    font-family: "museo_sans_700",Arial,Helvetica,sans-serif;
+    font-weight: normal;
+    line-height: 1.1em;
+    margin-bottom: 3px;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+}
 

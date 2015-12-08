@@ -1,0 +1,64 @@
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<title>Rates</title> 
+
+<body>
+<div class="row">	
+<div class="col-xs-offset-2 col-xs-8">
+<br>
+
+<button type="button" class="btn btn-info" onclick="clk_ch_img('usd');" > USD</button>
+<button type="button" class="btn btn-info" onclick="clk_ch_img('eur');" > EUR</button>
+<button type="button"class="btn btn-info"  onclick="clk_ch_img('rur');" > RUB</button>
+
+<div >
+	<img id="graph"  src="http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_usduah_a&quotedate=2015-11-04&quotedatefinish=2015-12-04" alt="">
+</div>
+</div>
+</div>
+
+
+
+
+<script>
+var Dat = new Date();
+var Dat1 = '',Dat2 = '',tmp;
+
+Dat1 = Dat.getFullYear()+'';
+tmp = Dat.getMonth()+1;
+Dat1 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
+tmp = Dat.getDate();
+Dat1 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
+
+Dat = new Date( Dat.valueOf() - 30*86400000);
+
+Dat2 = Dat.getFullYear()+'';
+tmp = Dat.getMonth()+1;
+Dat2 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
+tmp = Dat.getDate();
+Dat2 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
+
+
+
+//http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_ruruah_a&quotedate=2015-11-04&quotedatefinish=2015-12-04
+var tmpl_url ='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_VALuah_a&quotedate=DATE2&quotedatefinish=DATE1';
+
+
+function clk_ch_img(val)
+{
+var tmp = tmpl_url;
+tmp=tmp.replace('VAL',val);
+tmp=tmp.replace('DATE1',Dat1);
+tmp=tmp.replace('DATE2',Dat2);
+
+document.getElementById("graph").src=tmp
+
+
+}
+
+</script>
+
+</body>
