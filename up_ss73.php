@@ -2,18 +2,11 @@
 
 <form enctype="multipart/form-data" action="up_ss73.php" method="POST">
 
-<<<<<<< HEAD
  <select name='selecd' size="5">
  <option value="zero" sselected="selected">/</option>
  <option value="css">css</option>
  <option value="img">img</option>
  <option value="js">js</option>
-=======
- <select name='selecd' size="3">
- <option value="zero" sselected="selected">/</option>
- <option value="css">css</option>
-  <option value="img">img</option>
->>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
  </select>
 
     <input type="hidden" name="MAX_FILE_SIZE" value="30000" />
@@ -34,10 +27,7 @@ switch($uploaddir)
     {
       case "css": $uploaddir = $homedir.'css/'; break;
       case "img": $uploaddir = $homedir.'img/'; break;
-<<<<<<< HEAD
       case "js": $uploaddir = $homedir.'js/'; break;
-=======
->>>>>>> 47351cae0cca169ea6b4395c215c226dd36f07cf
       default:  $uploaddir = $homedir ; break;
     }
 

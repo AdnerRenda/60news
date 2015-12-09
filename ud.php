@@ -35,32 +35,27 @@ require_once "simple_html_dom.php";
 	$html = new simple_html_dom(); 
 	$html = str_get_html(request($url));
 
-	$auth = array('username'=>'AlexND','passwd'=>'mprssb30');
+	//$auth = array('username'=>'AlexND','passwd'=>'mprssb30');
+	$auth = array('username'=>'Kadiz20','passwd'=>'kadiz2035');
 	foreach ($html->find('input[type="hidden"]') as $item) {
 	$auth[$item->getAttribute('name')]=$item->getAttribute('value');}
 
-// print_r($auth);
-
-//http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_usd_uah&r=0
-//http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_rur_uah&r=0
-//http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_eur_uah&r=0
+	// print_r($auth);
 
 	
 	//for generation graph (img)
 	$url='http://www.udinform.com/index.php?option=com_dealingquotation&task=forexukr&Itemid=59';
 	request($url,$auth);
 
-	//then quickload raph (img)
+	//then quickload graph (img)
 	$url='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_usd_uah&quotedate=&quotedatefinish=&rnd=0';
-	
-	$image_sv = 'EUR.jpg';  
-    $img_sc = file_put_contents($image_sv, request($url,0,true));  
-	echo "<img src='".$image_sv."' alt=''>";
-
-
-
-
-
+	file_put_contents("usd.jpg", request($url,0,true));  
+	$url='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_eur_uah&quotedate=&quotedatefinish=&rnd=0';
+	file_put_contents("eur.jpg", request($url,0,true));  
+	$url='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_rur_uah&quotedate=&quotedatefinish=&rnd=0';
+	file_put_contents("rur.jpg", request($url,0,true));  
+    
+   echo "ok"; 
 ?>
 
 

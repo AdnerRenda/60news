@@ -1,29 +1,50 @@
 <head>
 <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
 
 <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="css/font-awesome.min.css">
 <title>Rates</title> 
 
 <body>
-<div class="row">	
-<div class="col-xs-offset-2 col-xs-8">
-<br>
+<div class="row col-xs-12 col-ms-offset-2 col-ms-8" style='padding-top:20px;'>	
 
-<button type="button" class="btn btn-info" onclick="clk_ch_img('usd');" > USD</button>
-<button type="button" class="btn btn-info" onclick="clk_ch_img('eur');" > EUR</button>
-<button type="button"class="btn btn-info"  onclick="clk_ch_img('rur');" > RUB</button>
+
+<div>
+
+	<div style='display:inline;' >
+		<h2 style='display:inline; '>Текущий день </h2> 
+
+		<div style='display:inline; padding-left:320px;' >
+		<button id="b_ref" type="button" class="btn btn-default" onclick="$.post('ud.php').success(function() { clk_ch_img(cur_graph); });" > ОБНОВИТЬ</button>
+		<button id="b_usd" type="button" class="btn btn-info" onclick="clk_ch_img('usd');" > USD</button>
+		<button id="b_eur" type="button" class="btn btn-info" onclick="clk_ch_img('eur');" > EUR</button>
+		<button id="b_rur" type="button"class="btn btn-info"  onclick="clk_ch_img('rur');" > RUB</button>
+		</div>
+
+	</div>
+
+	<img id="day_graph"  src="http://31.220.50.36:59125/usd.jpg" alt=""  style='margin-top:10;'>
+</div>
 
 <div >
+	<h2>За последние 30 дней</h2>
 	<img id="graph"  src="http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_usduah_a&quotedate=2015-11-04&quotedatefinish=2015-12-04" alt="">
 </div>
+
 </div>
-</div>
 
 
 
+
+
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 
 <script>
+var cur_graph = 'usd';
+var index = 0;
+
+//-----------------------------------------------
 var Dat = new Date();
 var Dat1 = '',Dat2 = '',tmp;
 
@@ -40,25 +61,24 @@ tmp = Dat.getMonth()+1;
 Dat2 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
 tmp = Dat.getDate();
 Dat2 += ( tmp > 9 ) ? '-'+tmp : '-0'+tmp;
-
-
-
-//http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_ruruah_a&quotedate=2015-11-04&quotedatefinish=2015-12-04
-var tmpl_url ='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_VALuah_a&quotedate=DATE2&quotedatefinish=DATE1';
-
+//-----------------------------------------------
 
 function clk_ch_img(val)
 {
+var tmpl_url ='http://www.udinform.com/quotation.php?option=com_dealingquotation&task=get_graph_period_VALuah_a&quotedate=DATE2&quotedatefinish=DATE1';
 var tmp = tmpl_url;
 tmp=tmp.replace('VAL',val);
 tmp=tmp.replace('DATE1',Dat1);
 tmp=tmp.replace('DATE2',Dat2);
 
-document.getElementById("graph").src=tmp
+index++;
+document.getElementById("graph").src=tmp;
+$('#day_graph').attr('src',val+'.jpg?'+index);
 
-
+cur_graph=val;
 }
 
+clk_ch_img(cur_graph);
 </script>
 
 </body>
